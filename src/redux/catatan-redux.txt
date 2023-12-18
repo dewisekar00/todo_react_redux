@@ -1,0 +1,22 @@
+NOTE:
+
+-alur menggunakan redux
+1.buat redux file dan isi kerangka kode nya
+  --redux 
+  --action
+  --reducer
+
+2. menghubungkan hasil/state input dari component ke redux
+-kirim action ke component yang diingkan
+-taruh hasil datanya ke action cth (onAddTodo(newValueInput) )
+-kirim datanya ke action pake dispatch ( mapDispatchToProps )
+-simpan datanya ke payload dan ke parameter action
+-lalu kirim ke reducer dan buat functionnya
+
+lalu data dari component input bisa disimpan di store utama
+
+3.mengirim data dari store ke component lain
+
+-ke component
+-pake useSelector untuk memilih data yang di perlukan
+-lalu tinggal mapping

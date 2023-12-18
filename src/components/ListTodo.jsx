@@ -1,11 +1,19 @@
-import React from 'react'
+import React from 'react';
+import { useSelector } from 'react-redux';
+import Item from './Item';
 
 const ListTodo = () => {
-  return (
-    <div>
-      <h1>List Todo</h1>
-    </div>
-  )
-}
+  const todos = useSelector((state) => state.todos.todos);
 
-export default ListTodo
+  return (
+    <div className="todo-list-wrapper">
+      <ul className="list-item">
+        {todos.map((todo) => (
+          <Item todo={todo} key={todo.id} />
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ListTodo;

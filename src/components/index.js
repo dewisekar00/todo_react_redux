@@ -1,5 +1,5 @@
-import Header from "./Header";
-import ListTodo from "./ListTodo";
-import InputTodo from "./InputTodo";
+import Header from './Header';
 
-export { Header, ListTodo, InputTodo}
+import InputTodo from './InputTodo';
+import ListTodo from './ListTodo';
+export { Header,  InputTodo, ListTodo };

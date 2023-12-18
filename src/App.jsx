@@ -1,20 +1,14 @@
-import { useState } from 'react'
-import './App.css'
-import { Header, InputTodo, ListTodo } from './components'
+import './App.css';
+import { Header, InputTodo, ListTodo } from './components';
 
 function App() {
-
-
   return (
-    <div className='app'>
-
-< Header />
-<ListTodo />
-<InputTodo/>
-
+    <div className="app ">
+      <Header />
+      <ListTodo />
+      <InputTodo />
     </div>
-
-  )
+  );
 }
 
-export default App
+export default App;
