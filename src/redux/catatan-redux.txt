@@ -20,3 +20,5 @@ lalu data dari component input bisa disimpan di store utama
 -ke component
 -pake useSelector untuk memilih data yang di perlukan
 -lalu tinggal mapping
+
+4.Edit data Input value Todo

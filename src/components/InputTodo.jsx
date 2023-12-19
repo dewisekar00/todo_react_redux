@@ -1,43 +1,50 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../redux/actions/todo-action';
 
-const InputTodo = ({ onAddTodo }) => {
-  // buat state
+const InputTodo = ({ onAddTodo, todos }) => {
   const [valueInput, setValueInput] = useState('');
 
-  // buat handle onChange( menangani perubahan nilai pada elemen seperti input, textarea, atau select)
+  useEffect(() => {
+    // Mengambil nilai terakhir dari daftar todos untuk nilai input
+    // useEffect memastikan bahwa input valueInput akan selalu menampilkan nilai terakhir yang dimasukkan atau diubah karena valueInput akan diubah oleh EditForm
+    if (todos.length > 0) {
+      const lastTodo = todos[todos.length - 1];
+      setValueInput('');
+
+    }
+  }, [todos]);
+
   const handleChange = (e) => {
-    // hasil input value di masukan ke state valueInput untuk disimpan
     setValueInput(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newValueInput = { valueInput, complete: false, id: Date.now() };
-    onAddTodo(newValueInput); //hubungkan dengan action add
+    onAddTodo(newValueInput);
 
     setValueInput('');
   };
 
   return (
-
-      <form onSubmit={handleSubmit} className="form">
-        <div>
-
+    <form onSubmit={handleSubmit} className="form">
+      <div>
         <input type="text" placeholder="write here" value={valueInput} onChange={handleChange} />
-        </div>
-     <div className='costume-add'>
-
+      </div>
+      <div className="costume-add">
         <button>
-            <span className="material-symbols-outlined ">add</span>
+          <span className="material-symbols-outlined">add</span>
         </button>
-     </div>
-          
-      </form>
-  
+      </div>
+    </form>
   );
+};
+
+const mapStateToProps = (state) => {
+  return {
+    todos: state.todos.todos,
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {
@@ -46,7 +53,32 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(InputTodo);
+export default connect(mapStateToProps, mapDispatchToProps)(InputTodo);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 mengubah state lokal ke redux agar bisa dibagikan ke component yang lain

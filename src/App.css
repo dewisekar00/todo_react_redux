@@ -1,106 +1,72 @@
-.app{
-    margin: 64px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-   
+.app {
+  margin: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.title{
+.title {
   font-family: 'Inter', sans-serif;
-    font-weight: 200;
+  font-weight: 200;
 }
-.sub-title{
-  
-    font-family: 'Inria Serif', serif;
-    font-weight: 300;
+.sub-title {
+  font-family: 'Inria Serif', serif;
+  font-weight: 300;
 }
 
-.nav-container a{
-  
-    font-family: 'Inria Serif', serif;
-    text-decoration: none;
+.nav-container p {
+  font-family: 'Inria Serif', serif;
+  text-decoration: none;
 
   font-size: 14px;
   color: black;
   border: 2px solid black;
   margin-right: 24px;
   padding: 4px;
-border-radius: 32px;
-width: 80px;
+  border-radius: 32px;
+  width: 80px;
 
-display: inline-block;
-text-align: center;
-line-height: 20px;
+  display: inline-block;
+  text-align: center;
+  line-height: 20px;
 }
 
-.nav-container a:active {
-    background-color: lightgray; 
-  }
-  .nav-container a:hover{
-    background-color: lightgray; 
-  }
-
-/* 
-input{
-outline: none;
-margin-top: 20px;
-width: 800px;
-height: 50px;
-background-color: black;
-border-radius: 8px;
-border: 0px solid;
-color: white;
-padding-left: 16px;
-font-size: 16px;
+.nav-container p:active {
+  background-color: lightgray;
+}
+.nav-container p:hover {
+  background-color: lightgray;
 }
 
-
-
-.costume-add {
-
-  font-size: 40px;
-} */
-
-
-/* .input-wrapper{
-  justify-content: center;
-  display: flex;
-
-}
- */
-
-
-.list-item .items{
+.list-item .items {
   display: flex;
   justify-content: space-between;
   background: black;
   border-radius: 10px;
   padding: 14px;
   display: flex;
- margin-bottom: 16px;
-  color:white ;
+  margin-bottom: 16px;
+  color: white;
   width: 600px;
   height: 30px;
   font-family: 'Inter', sans-serif;
 }
 
-input[type=checkbox]{
-  accent-color:  grey;  
+input[type='checkbox'] {
+ 
   width: 30px;
   height: 30px;
   margin-top: 0;
- margin-right: 16px;
-  }
+  margin-right: 16px;
+}
 
-  .items-1{
-    display: flex;
-    align-items: center;
+.items-1 {
+  display: flex;
+  align-items: center;
+}
 
-  }
-
-.form{
+.form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,35 +77,59 @@ input[type=checkbox]{
   margin-left: 70px;
 }
 
-.form input{
+.form input {
   outline: none;
   margin-top: 20px;
   width: 600px;
   height: 50px;
   border: 2px solid black;
   border-radius: 8px;
- 
+
   padding-left: 16px;
   font-size: 16px;
-  }
+}
 
-  .costume-add span{
-    font-size: 40px;
-    margin-top: 18px;
-  }
+.costume-add span {
+  font-size: 40px;
+  margin-top: 18px;
+}
 
-  input::placeholder{
-    outline: none;
-    color: black
-  }
+input::placeholder {
+  outline: none;
+  color: black;
+}
 
-  button {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-  
-  }
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+
+
+.form-edit input{
+  width: 550px;
+  height: 30px;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 16px;
+  color: white;
+  background-color: black;
+
+}
+
+.form-edit input::placeholder{
+  outline: none;
+  color: white;
+}
+.form-edit .btn-edit-add{
+  width: 60px;
+  height: 50px;
+  background-color: grey;
+  border-radius: 10px;
+  color: white;
+}

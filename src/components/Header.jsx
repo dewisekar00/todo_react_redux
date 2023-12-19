@@ -1,5 +1,9 @@
 import React from 'react';
 
+import AllButton from './ButtonComponents/AllButton';
+import ActiveButton from './ButtonComponents/ActiveButton';
+import CompletedButton from './ButtonComponents/CompletedButton';
+
 const Header = () => {
   return (
     <div className="header">
@@ -8,9 +12,9 @@ const Header = () => {
       </h2>
 
       <div className="nav-container">
-        <a href="#">All</a>
-        <a href="#">active</a>
-        <a href="#">complete</a>
+      <AllButton/>
+     <ActiveButton/>
+     <CompletedButton/>
       </div>
     </div>
   );

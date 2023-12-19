@@ -1,4 +1,4 @@
--menambahkan item( edit)
+
 -bagi todosnya
 
 
@@ -6,5 +6,7 @@
 
 todo:
 -bagi
--buat action  edit
+-styling 
 -responsive
+
+
