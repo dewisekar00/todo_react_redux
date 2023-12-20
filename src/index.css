@@ -1,28 +1,239 @@
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-}
- */
+/* 
+body {
 
-/* body{
-  background-color: #F4C6D0;
+background-color: #FFEBD8;
 }
- .app{
+.app {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5%;
 
- }
- 
- .title {
+  margin-top: 32px;
+} */
+
+/* stle header */
+/* .header {
+  margin-left: 200px;
+}
+.title {
   font-family: 'Inter', sans-serif;
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 30px;
 }
 .sub-title {
   font-family: 'Inria Serif', serif;
   font-weight: 300;
 } */
+/* 
+.nav-container {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-container button {
+  font-family: 'Inria Serif', serif;
+  border: 2px solid black;
+  width: 100px;
+  height: 30px;
+  border-radius: 16px;
+  background-color: white;
+}
+.nav-container button:hover {
+  background-color: #F1AFBB ;
+}
+.nav-container button:active {
+  background-color: #F1AFBB ;
+} */
+/* end style header */
+
+
+
+/* style component InputTodo */
+/* 
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  gap: 8px;
+}
+
+.form input {
+  width: 850px;
+  height: 50px;
+  padding-left: 16px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+} */
+
+/* end */
+
+/* start listTodo */
+/* .list-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 160px;
+  margin-top: 64px;
+}
+.list-item .items {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  margin-bottom: 16px;
+  color: black;
+  width: 850px;
+  height: 30px;
+  font-family: 'Inter', sans-serif;
+} */
+
+/* input[type='checkbox'] {
+  width: 30px;
+  height: 30px;
+  margin-top: 0;
+  margin-right: 16px;
+}
+
+.items-1 {
+  display: flex;
+  align-items: center;
+}
+
+.form-edit input {
+  width: 830px;
+  height: 30px;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 16px;
+ 
+  border: none;
+  background-color: white;
+  outline: none;
+  padding-left: 32px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-edit input::placeholder {
+  outline: none;
+  color: white;
+} */
+
+/* .btn-edit-add {
+  margin-left: -80px;
+  height: 60px;
+  width: 80px;
+  background-color:#F1AFBB ;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+.costume-add{
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 80px;
+
+  background-color:#F1AFBB ;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+.costume-add:hover{
+  background-color:#cf9ea7 ;
+  
+} */
+
+
+
+/* @media screen and (max-width: 480px) {
+.app{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title{
+  font-size: 30px;
+
+}
+.sub-title{
+  font-size: 30px;
+} */
+
+/* .nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+
+}
+
+.nav-container button {
+  width: 120px; 
+
+  border-radius: 56px;
+  font-size: 20px;
+
+}
+
+.form input {
+
+  width: 300px;
+  height: 60px;
+  padding-left: 16px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+} */
+/* 
+.input-todo-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.costume-add{
+  font-size: 20px;
+  padding: 16px;
+  height: 30px;
+  width: 30px;
+}
+.list-item {
+}
+.list-item .items {
+
+  background: white;
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  margin-bottom: 16px;
+  color: black;
+  width: 350px;
+  height: 40px;
+  font-family: 'Inter', sans-serif;
+} */
+
+/* }  */
+

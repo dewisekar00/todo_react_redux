@@ -3,7 +3,7 @@ export const TOGGLE_ITEM ='TOGGLE_ITEM'
 export const DELETE_ITEM ='DELETE_ITEM'
 export const EDIT_ADD = 'EDIT_ADD'
 export const EDIT_TODO = 'EDIT_TODO'
-
+export const FILTER_TODO = 'FILTER_TODO'
 
 export function addTodo (todo){
     return{
@@ -37,6 +37,15 @@ export function editTodo(itemId){
     return{
         type: EDIT_TODO,
         payload: itemId
+    }
+
+}
+
+
+export function filterTodo(filter){
+    return{
+        type: FILTER_TODO,
+        payload: filter
     }
 }
 /* 

@@ -28,16 +28,20 @@ const InputTodo = ({ onAddTodo, todos }) => {
   };
 
   return (
+    <div className='input-todo-wrapper'>
+
+   
     <form onSubmit={handleSubmit} className="form">
       <div>
         <input type="text" placeholder="write here" value={valueInput} onChange={handleChange} />
       </div>
       <div className="costume-add">
         <button>
-          <span className="material-symbols-outlined">add</span>
+          Add
         </button>
       </div>
     </form>
+    </div>
   );
 };
 

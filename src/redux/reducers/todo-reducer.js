@@ -1,7 +1,8 @@
-import { ADD_TODO, DELETE_ITEM, EDIT_ADD, EDIT_TODO, TOGGLE_ITEM } from '../actions/todo-action';
+import { ADD_TODO, DELETE_ITEM, EDIT_ADD, EDIT_TODO, FILTER_TODO, TOGGLE_ITEM } from '../actions/todo-action';
 
 const initialState = {
   todos: [],
+  FilterTodo:[]
 };
 
 function todoReducer(state = initialState, action) {
@@ -26,19 +27,20 @@ function todoReducer(state = initialState, action) {
         ...state,
         todos: state.todos.map((item) => (item.id === action.payload ? { ...item, isEditing: !item.isEditing } : item)),
       };
-      case EDIT_ADD:
-        const { todo, itemId } = action.payload;
-        const newTodos = state.todos.map((item) =>
-            item.id === itemId ? { ...item, valueInput: todo, isEditing: !item.isEditing } : item
-        );
-        return {
-            ...state,
-            todos: newTodos,
-        };
-    
-
+    case EDIT_ADD:
+      const { todo, itemId } = action.payload;
+      const newTodos = state.todos.map((item) => (item.id === itemId ? { ...item, valueInput: todo, isEditing: !item.isEditing } : item));
+      return {
+        ...state,
+        todos: newTodos,
+      };
+case FILTER_TODO:
+  return{
+    ...state,
+    FilterTodo: action.payload
+  }
     default:
-      return state; 
+      return state;
   }
 }
 

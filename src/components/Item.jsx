@@ -40,3 +40,15 @@ const Item = ({ todo }) => {
 };
 
 export default Item;
+
+
+/*
+NOTE:
+line through checkbox
+1.buat action yang memiliki payload id, karena kita akan mnenggunakan id untuk memilih item mana yang sudah complete
+2.buat reducernya yang mana mapping todos dan membuat state baru, lalu kondisi dimana item.id === id, lalu buat perkondisian on off / true false untuk input checkbox complete atau tidak
+3.baru ke component yang dimaksud 
+-pake useDispatch
+-buat sebuah fungsi handle yang berisi action
+-ke tag yang dimaksud(input)
+*/

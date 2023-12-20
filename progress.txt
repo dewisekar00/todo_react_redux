@@ -2,11 +2,10 @@
 -bagi todosnya
 
 
--action(, edit )
+
 
 todo:
 -bagi
--styling 
 -responsive
 
 

@@ -8,21 +8,15 @@ const EditForm = ({ todo }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(editAdd(value, todo.id)); 
-    setValue(''); 
-    
+    dispatch(editAdd(value, todo.id));
+    setValue('');
   };
 
   return (
-    <form onSubmit={handleSubmit} className='form-edit'>
-      <input
-        type='text'
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-        placeholder='Update task'
-      />
-      <button type="submit" className='btn-edit-add'>
-        done
+    <form onSubmit={handleSubmit} className="form-edit">
+      <input type="text" value={value} onChange={(e) => setValue(e.target.value)} placeholder="Update task" />
+      <button type="submit" className="btn-edit-add">
+        Done
       </button>
     </form>
   );
