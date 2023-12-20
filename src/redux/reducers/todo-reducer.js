@@ -2,7 +2,7 @@ import { ADD_TODO, DELETE_ITEM, EDIT_ADD, EDIT_TODO, FILTER_TODO, TOGGLE_ITEM } 
 
 const initialState = {
   todos: [],
-  FilterTodo:[]
+  FilterTodo: [],
 };
 
 function todoReducer(state = initialState, action) {
@@ -34,11 +34,11 @@ function todoReducer(state = initialState, action) {
         ...state,
         todos: newTodos,
       };
-case FILTER_TODO:
-  return{
-    ...state,
-    FilterTodo: action.payload
-  }
+    case FILTER_TODO:
+      return {
+        ...state,
+        FilterTodo: action.payload,
+      };
     default:
       return state;
   }

@@ -8,14 +8,17 @@ const EditForm = ({ todo }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if( value.trim() === ''){
+      return false
+     } else{
     dispatch(editAdd(value, todo.id));
     setValue('');
-  };
+  }};
 
   return (
-    <form onSubmit={handleSubmit} className="form-edit">
-      <input type="text" value={value} onChange={(e) => setValue(e.target.value)} placeholder="Update task" />
-      <button type="submit" className="btn-edit-add">
+    <form onSubmit={handleSubmit} className="flex justify-between items-center border-2 my-4 rounded-lg">
+      <input type="text" value={value} onChange={(e) => setValue(e.target.value)} placeholder="Update task" className="h-10  px-2 borde  rounded-md focus:outline-none focus:ring-2 focus:ring-transparent placeholder-gray-400" />
+      <button type="submit" className="bg-customPink hover:bg-slate-400 text-white font-bold py-2 px-4 rounded">
         Done
       </button>
     </form>

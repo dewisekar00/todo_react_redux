@@ -11,7 +11,6 @@ const InputTodo = ({ onAddTodo, todos }) => {
     if (todos.length > 0) {
       const lastTodo = todos[todos.length - 1];
       setValueInput('');
-
     }
   }, [todos]);
 
@@ -21,26 +20,32 @@ const InputTodo = ({ onAddTodo, todos }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // if input empty user can't add todo
+ if( valueInput.trim() === ''){
+  return false
+ } else{
     const newValueInput = { valueInput, complete: false, id: Date.now() };
     onAddTodo(newValueInput);
 
-    setValueInput('');
+    setValueInput('');}
   };
 
   return (
-    <div className='input-todo-wrapper'>
-
-   
-    <form onSubmit={handleSubmit} className="form">
-      <div>
-        <input type="text" placeholder="write here" value={valueInput} onChange={handleChange} />
-      </div>
-      <div className="costume-add">
-        <button>
-          Add
-        </button>
-      </div>
-    </form>
+    <div className="flex items-center mt-10">
+      <form onSubmit={handleSubmit} className="flex">
+        <div className="mr-2 w-64 ">
+          <input
+            type="text"
+            placeholder="write here"
+            value={valueInput}
+            onChange={handleChange}
+            className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white "
+          />
+        </div>
+        <div>
+          <button className="bg-customPink hover:bg-slate-400 text-white font-bold py-2 px-4 rounded">Add</button>
+        </div>
+      </form>
     </div>
   );
 };
@@ -58,31 +63,6 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(InputTodo);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 mengubah state lokal ke redux agar bisa dibagikan ke component yang lain
@@ -113,4 +93,6 @@ onChange=mengambil nilai input,menyimpan distate,cara cek udah tersimpan apa bel
 2.seperti menyimpan nilai input ke dalam database atau menjalankan logika lainnya
 3.menangani data yang sudah di-input oleh pengguna, misalnya menyimpannya ke dalam state lain, melakukan pengiriman data ke server, atau menjalankan logika lainnya yang terkait dengan data yang sudah lengkap atau siap untuk disimpan
 
+-kalo inputan kosong ngga boleh submit
+ trim() di sini memastikan bahwa input yang benar-benar kosong atau hanya terdiri dari spasi akan dianggap tidak valid dan tidak akan diizinkan untuk submit
 */

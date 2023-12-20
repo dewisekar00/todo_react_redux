@@ -34,20 +34,23 @@ const ListTodo = () => {
   });
 
   return (
-    <div className="todo-list-wrapper">
-      {/* Tombol untuk memfilter */}
-      {/* <button onClick={() => handleFilter('ALL')}>All</button>
-      <button onClick={() => handleFilter('ACTIVE')}>Active</button>
-      <button onClick={() => handleFilter('COMPLETE')}>Complete</button> */}
-<div className='nav-container'>
-  <Button title="All" handleClick={() => handleFilter('ALL')} />
-  <Button title="Active" handleClick={() => handleFilter('ACTIVE')} />
-  <Button title="Complete" handleClick={() => handleFilter('COMPLETE')} />
-</div>
+    <>
+      <div className="flex justify-center items-center  mt-4 gap-4">
+        <Button title="All" handleClick={() => handleFilter('ALL')} />
+        <Button title="Active" handleClick={() => handleFilter('ACTIVE')} />
+        <Button title="Complete" handleClick={() => handleFilter('COMPLETE')} />
+      </div>
 
-      {/* Daftar todos yang sudah difilter */}
-      <ul className="list-item">{filteredTodos.map((item) => (item.isEditing ? <EditForm key={item.id} editAdd={handleAdd} todo={item} /> : <Item key={item.id} todo={item} onEdit={() => handleEditTodo(item.id)} />))}</ul>
-    </div>
+      <div className="mt-10 w-auto h-auto ">
+        {filteredTodos.length === 0 ? (
+          <div className="text-center mt-40 font-bold text-slate-400">
+            <p>Todo is empty,add some todos!</p>
+          </div>
+        ) : (
+          <ul>{filteredTodos.map((item) => (item.isEditing ? <EditForm key={item.id} editAdd={handleAdd} todo={item} /> : <Item key={item.id} todo={item} onEdit={() => handleEditTodo(item.id)} />))}</ul>
+        )}
+      </div>
+    </>
   );
 };
 

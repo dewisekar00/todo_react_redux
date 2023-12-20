@@ -1,19 +1,12 @@
 import React from 'react';
-import Button from './Button';
-
-
-
 
 const Header = () => {
-
-
   return (
-    <div className="header">
-      <h2 className="title">
-        todo <br /> <span className="sub-title">set your time</span>
+    <div className="text-lg block mr-48 ml-4 ">
+      <h2 className="font-bold">
+        todo <br />
+        <span className="font-serif font-normal text-2xl">set your time</span>
       </h2>
-
-      {/* */}
     </div>
   );
 };

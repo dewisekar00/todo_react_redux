@@ -22,3 +22,9 @@ lalu data dari component input bisa disimpan di store utama
 -lalu tinggal mapping
 
 4.Edit data Input value Todo
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

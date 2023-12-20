@@ -19,15 +19,13 @@ const Item = ({ todo }) => {
 
   return (
     <>
-      <li className="items">
-        <div className="items-1">
-          <input type="checkbox" checked={todo.complete} onChange={handleCheckboxChange} />
-          <span style={todo.complete ? { textDecoration: 'line-through', color: 'grey' } : {}}>
-            {todo.valueInput}
-          </span>
+      <li className="flex justify-between items-center hover:  py-2 border-b border-gray-300 bg-customPink w-80 h-14 rounded-lg px-4 font-semibold my-4 hover:scale-125 transition duration-1000">
+        <div className="flex items-center">
+          <input type="checkbox" checked={todo.complete} onChange={handleCheckboxChange} className="mr-2 " />
+          <span className={todo.complete ? 'line-through text-white' : ''}>{todo.valueInput}</span>
         </div>
-        <div className="icon-wrapper">
-          <button onClick={handleButtonEdit}>
+        <div>
+          <button onClick={handleButtonEdit} className="mr-2">
             <span className="material-symbols-outlined">edit_note</span>
           </button>
           <button onClick={handleButtonDelete}>
@@ -40,7 +38,6 @@ const Item = ({ todo }) => {
 };
 
 export default Item;
-
 
 /*
 NOTE:

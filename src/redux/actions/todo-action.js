@@ -5,6 +5,7 @@ export const EDIT_ADD = 'EDIT_ADD'
 export const EDIT_TODO = 'EDIT_TODO'
 export const FILTER_TODO = 'FILTER_TODO'
 
+
 export function addTodo (todo){
     return{
         type: ADD_TODO,

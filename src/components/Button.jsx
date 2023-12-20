@@ -8,14 +8,18 @@ const Button = ({ title, handleClick }) => {
 
   const handleClickButton = () => {
     dispatch(filterTodo(title)); 
-    handleClick();// Sesuaikan dengan parameter yang dibutuhkan oleh fungsi filterTodo
+    handleClick();
   };
 
   return (
-    <div>
-      <button onClick={handleClickButton}>{title}</button>
+    <div className=' border-black border-2 mt-4  hover:bg-customPink  focus:shadow-outline focus:outline-none text-black  py-1 px-6 font-serif rounded-2xl'>
+    <button onClick={handleClickButton} >
+{title}
+</button>
     </div>
   );
 };
 
 export default Button;
+
+
