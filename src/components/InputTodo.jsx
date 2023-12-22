@@ -4,6 +4,7 @@ import { addTodo } from '../redux/actions/todo-action';
 
 const InputTodo = ({ onAddTodo, todos }) => {
   const [valueInput, setValueInput] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     // Mengambil nilai terakhir dari daftar todos untuk nilai input
@@ -16,6 +17,7 @@ const InputTodo = ({ onAddTodo, todos }) => {
 
   const handleChange = (e) => {
     setValueInput(e.target.value);
+    setErrorMessage('');
   };
 
   const handleSubmit = (e) => {
@@ -23,6 +25,8 @@ const InputTodo = ({ onAddTodo, todos }) => {
     // if input empty user can't add todo
  if( valueInput.trim() === ''){
   return false
+ }else if(valueInput.length > 26){
+return   setErrorMessage('maksimal input kurang dari 26')
  } else{
     const newValueInput = { valueInput, complete: false, id: Date.now() };
     onAddTodo(newValueInput);
@@ -41,6 +45,9 @@ const InputTodo = ({ onAddTodo, todos }) => {
             onChange={handleChange}
             className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white "
           />
+           {errorMessage && <p className="text-customPink">{errorMessage}</p>}
+        </div>
+        <div>
         </div>
         <div>
           <button className="bg-customPink hover:bg-slate-400 text-white font-bold py-2 px-4 rounded">Add</button>

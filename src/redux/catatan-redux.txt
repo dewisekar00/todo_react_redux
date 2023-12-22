@@ -24,7 +24,3 @@ lalu data dari component input bisa disimpan di store utama
 4.Edit data Input value Todo
 
 
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
